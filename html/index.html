@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/mediaQueries.css">
+</head>
+<body>
+    <script src="/scripts/script.js"></script>
+    <header id="desktop-header">
+        <div class="logo">Vincent Degreef</div>
+        <nav id="desktop-nav">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header id="mobile-header">
+        <div class="logo">Vincent Degreef</div>
+        <nav id="mobile-nav">
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>   
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="profile">
+            <div class="profile-section-pic">
+                <img src="/assets/PF_linkedin.jpg" alt="PF Vincent Degreef">
+            </div>
+            <div class="profile-content">
+                <h4>Hello I am</h4>
+                <h1>Vincent Degreef</h1>
+                <p>Student Applied Science</p>
+                <div class="profile-content-img">
+                    <a href=""><img src="/assets/github.png" alt="github"></a>
+                    <a href="#contact" class="btn"><img src="/assets/linkedin.png" alt="contact"></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-section-pic">
+                <img src="/assets/PF_linkedin.jpg" alt="PF Vincent Degreef">
+            </div>
+            <div class="about-content">
+                <h2>About Me</h2>
+                <div class="info-cards">
+                    <article>
+                        <h3>Who am I?</h3>
+                        <p>
+                            Hi, I'm Vincent Degreef, 
+                            a student applied science at UCLL.
+                        </p>
+                    </article>
+                    <article>
+                        <h3>What do I do?</h3>
+                        <p>
+                            I'm a student applied science at UCLL. 
+                            I'm currently in my 2nd year of the bachelor. 
+                            I'm studying to become a software engineer.
+                        </p>
+                    </article>
+                </div>
+                <p>
+                    Hi, I'm Vincent Degreef, 
+                    a student applied science at UCLL.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
