@@ -1,95 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/mediaQueries.css">
-</head>
-<body>
-    <script src="/scripts/script.js"></script>
-    <header id="desktop-header">
-        <div class="logo">Vincent Degreef</div>
-        <nav id="desktop-nav">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <header id="mobile-header">
-        <div class="logo">Vincent Degreef</div>
-        <nav id="mobile-nav">
-            <div class="hamburger-menu" onclick="toggleMenu()">
-                <div class="hamburger-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>   
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section id="profile">
-            <div class="profile-section-pic">
-                <img src="/assets/PF_linkedin.jpg" alt="PF Vincent Degreef">
-            </div>
-            <div class="profile-content">
-                <h4>Hello I am</h4>
-                <h1>Vincent Degreef</h1>
-                <p>Student Applied Science</p>
-                <div class="profile-content-img">
-                    <a href="https://github.com/VincentDegreef"><img src="/assets/github.png" alt="github"></a>
-                    <a href="https://www.linkedin.com/in/degreefvincent/" class="btn"><img src="/assets/linkedin.png" alt="contact"></a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            customDB: "#050E26",
+                            customBr: "#968C7D"
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+    <body class="bg-white text-customDB font-sans flex flex-col">
+        <header class="flex text-white justify-between items-center p-6 bg-customDB shadow-lg">
+            <h1 class="text-3xl font-extrabold">Vincent Degreef</h1>
+            <nav>
+                <ul class="flex gap-6">
+                    <li><a class="text-lg font-semibold hover:text-customBr transition" href="#home">Home</a></li>
+                    <li><a class="text-lg font-semibold hover:text-customBr transition" href="#about">About</a></li>
+                    <li><a class="text-lg font-semibold hover:text-customBr transition" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="flex flex-col items-center justify-center">
+            <!-- div for home -->
+            <section id="home" class="flex flex-col items-center justify-center h-screen text-center">
+                <h2 class="text-5xl font-bold p-4">Welcome to My Portfolio</h2>
+                <img src="/assets/pfp_linkedin.jpg" alt="Profile picture" class="rounded-full w-72 shadow-2xl border-3 border-customDB">
+                <p class="mt-6 text-lg max-w-xl">I am a passionate developer, designer, and problem solver. Explore my work and feel free to connect!</p>
+                <a href="#" class="mt-6 px-6 py-3 bg-customDB text-white font-bold rounded-lg shadow-lg hover:bg-opacity-90 transition">View My Work</a>
+            </section>
+
+            <!-- div for about -->
+            <section id="about" class="flex flex-col items-center justify-center h-screen text-center">
+                <h2 class="text-4xl font-bold text-center p-4">About Me</h2>
+                <div class="flex flex-col md:flex-row gap-6 items-center justify-center">
+                    <img src="/assets/pfp_linkedin.jpg" alt="Profile picture" class="rounded-full w-72 shadow-2xl border-3 border-customDB">
+                    <div class="max-w-xl">
+                        <p class="text-lg">I am a passionate fullstack developer</p>
+                        <p class="text-lg mt-4">I am currently an intern at AdShot, living in Leuven</p>
+            </section>
+
+            <!-- div for contact -->
+            <div id="contact" class="flex flex-col items-center justify-center h-screen text-center">
+                <h2 class="text-4xl font-bold text-center p-4">Contact Me</h2>
+                <div>
+                    <h3>Email</h3>
+                    <h3>Phone</h3>
+                    <h3>LinkedIn</h3>
                 </div>
             </div>
-        </section>
-
-        <section id="about">
-            <div class="about-section-pic">
-                <img src="/assets/PF_linkedin.jpg" alt="PF Vincent Degreef">
-            </div>
-            <div class="about-content">
-                <h2>About Me</h2>
-                <div class="info-cards">
-                    <article>
-                        <h3>Who am I?</h3>
-                        <p>
-                            Hi, I'm Vincent Degreef, 
-                            a student applied science at UCLL.
-                        </p>
-                    </article>
-                    <article>
-                        <h3>What do I do?</h3>
-                        <p>
-                            I'm a student applied science at UCLL. 
-                            I'm currently in my 2nd year of the bachelor. 
-                            I'm studying to become a software engineer.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="contact-content">
-                <h2>Contact Me</h2>
-                <div class="contact-info">
-                    <article>
-                        <h3>Email</h3>
-                    </article>
-                </div>    
-            </div>
-        </section>
-    </main>
-</body>
+            
+            
+        </main>
+        <footer class="p-6 bg-customBr text-center text-customDB font-semibold mt-10">
+            &copy; 2025 Vincent Degreef. All Rights Reserved.
+        </footer>
+    </body>
 </html>
